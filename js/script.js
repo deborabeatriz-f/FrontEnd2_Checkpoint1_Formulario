@@ -38,7 +38,28 @@ btn.addEventListener("click", (event) => {
   img.setAttribute("src", document.querySelector("#field3").value);
   document.querySelector("main").appendChild(img);
 
+  // adições da aula 08 - ainda não está funcinando *
+
+  // Genero - pegando todos os inputs que são type=radio
+  // let genero = document.querySelectorAll("input[type='radio']");
+  // for (let i = 0; i < generos.length; i++) {
+  //   if (generos[i].checked) {
+  //     genero = generos[i].value;
+  //     break;
+  //   }
+
+  // li = document.createElement("li");
+  // li.innerText = `Gênero: ${genero}.`;
+
+  // Checkbox Assistido
+  // let assistido = document.querySelector("input[type='checkbox']");
+  // let assistidoTxt;
+  // assistido.checked
+  //   ? (assistidoTxt = "Filme já assistido!")
+  //   : (assistidoTxt = "Filme não assistido");
+
+  // li = document.createElement("li");
+  // li.innerText = `${assistidoTxt}.`;
+
   list.appendChild(li);
 });
-
-// dica para adicionar imagem
