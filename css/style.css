@@ -12,7 +12,6 @@ main {
     rgb(108, 121, 165) 60%
   );
   color: #e2d1c3;
-  height: 100vh;
 }
 
 h1 {
@@ -40,8 +39,7 @@ h1 {
   font-weight: 500;
 }
 
-input[type="text"],
-input[type="password"] {
+input[type="text"] {
   text-align: center;
   height: 2rem;
   margin: 0.7rem;
@@ -53,6 +51,17 @@ h2 {
   margin-bottom: 2rem;
 }
 
-img {
-  width: 20%;
+.displayLista {
+  height: 15rem;
+  background-color: rgba(240, 255, 255, 0.233);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.cartaz {
+  width: 15rem;
 }
