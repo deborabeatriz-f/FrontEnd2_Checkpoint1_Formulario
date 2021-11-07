@@ -26,6 +26,21 @@ h1 {
   align-items: center;
 }
 
+.images {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-left: 200px;
+}
+
+.images img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 32px;
+}
+
 .button {
   margin: 0.7rem;
   margin-bottom: 3rem;
@@ -42,17 +57,17 @@ h1 {
 input[type="text"] {
   text-align: center;
   height: 2rem;
-  margin: 0.7rem;
+  margin: 1rem;
   border: 0;
   border-radius: 0.5rem;
 }
 
 h2 {
-  margin-bottom: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 .displayLista {
-  height: 15rem;
   background-color: rgba(240, 255, 255, 0.233);
   display: flex;
   justify-content: space-between;
@@ -63,5 +78,6 @@ h2 {
 }
 
 .cartaz {
+  padding-top: 1rem;
   width: 15rem;
 }

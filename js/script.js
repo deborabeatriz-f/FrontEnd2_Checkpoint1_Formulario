@@ -20,36 +20,78 @@ let btn = document.querySelector("#btn");
 let list = document.querySelector("ol");
 
 btn.addEventListener("click", (event) => {
-  let displayLista = document.createElement("div");
-  displayLista.setAttribute("class", "displayLista");
-  document.querySelector(".listaCompleta").appendChild(displayLista);
+  let imagens = [
+    "./images/1.jpg",
+    "./images/2.jpg",
+    "./images/3.jpg",
+    "./images/4.jpg",
+    "./images/5.jpg",
+    "./images/6.jpg",
+    "./images/7.jpg",
+    "./images/8.jpg",
+    "./images/9.jpg",
+    "./images/10.jpg",
+    "./images/11.jpg",
+    "./images/12.jpg",
+    "./images/13.jpg",
+    "./images/14.jpg",
+    "./images/15.jpg",
+    "./images/16.jpg",
+    "./images/17.jpg",
+    "./images/18.jpg",
+    "./images/19.jpg",
+    "./images/20.jpg",
+  ];
 
-  console.log("clicou em mim");
+  let imgIndex1 = Math.floor(Math.random() * imagens.length);
+  let img1 = document.querySelector(".img1");
+  img1.setAttribute("src", imagens[imgIndex1]);
+
+  let imgIndex2 = Math.floor(Math.random() * imagens.length);
+  let img2 = document.querySelector(".img2");
+  img2.setAttribute("src", imagens[imgIndex2]);
+
+  let imgIndex3 = Math.floor(Math.random() * imagens.length);
+  let img3 = document.querySelector(".img3");
+  img3.setAttribute("src", imagens[imgIndex3]);
+
+  let imgIndex4 = Math.floor(Math.random() * imagens.length);
+  let img4 = document.querySelector(".img4");
+  img4.setAttribute("src", imagens[imgIndex4]);
 
   // impede que o evento padrão aconteça (no caso do form, não envia para um backend)
   event.preventDefault();
 
-  let genero = document.querySelectorAll("input[type='radio']");
-  for (let i = 0; i < genero.length; i++) {
-    if (genero[i].checked) {
-      genero = genero[i].value;
-      break;
+  if (field1.value == "" && field3.value == "") {
+    alert("Preencha o formulário acima !");
+  } else {
+    let displayLista = document.createElement("div");
+    displayLista.setAttribute("class", "displayLista");
+    document.querySelector(".listaCompleta").appendChild(displayLista);
+
+    console.log("clicou em mim");
+    let genero = document.querySelectorAll("input[type='radio']");
+    for (let i = 0; i < genero.length; i++) {
+      if (genero[i].checked) {
+        genero = genero[i].value;
+        break;
+      }
     }
+
+    let assistido = document.querySelector("input[type='checkbox']");
+    let assistidoTxt;
+    assistido.checked
+      ? (assistidoTxt = "Filme já assistido!")
+      : (assistidoTxt = "Filme não assistido");
+
+    let paragrafo = document.createElement("p");
+    paragrafo.innerText = `Filme: ${field1.value}. Direção: ${field2.value}. Gênero: ${genero}. ${assistidoTxt}.`;
+
+    displayLista.appendChild(paragrafo);
+
+    let img = document.createElement("img");
+    img.setAttribute("class", "cartaz");
+    img.setAttribute("src", document.querySelector("#field3").value);
+    displayLista.appendChild(img);
   }
-
-  let assistido = document.querySelector("input[type='checkbox']");
-  let assistidoTxt;
-  assistido.checked
-    ? (assistidoTxt = "Filme já assistido!")
-    : (assistidoTxt = "Filme não assistido");
-
-  let paragrafo = document.createElement("p");
-  paragrafo.innerText = `Filme: ${field1.value}. Direção: ${field2.value}. Gênero: ${genero}. ${assistidoTxt}.`;
-
-  displayLista.appendChild(paragrafo);
-
-  let img = document.createElement("img");
-  img.setAttribute("class", "cartaz");
-  img.setAttribute("src", document.querySelector("#field3").value);
-  displayLista.appendChild(img);
 });
