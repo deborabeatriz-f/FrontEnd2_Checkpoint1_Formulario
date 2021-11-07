@@ -63,7 +63,7 @@ btn.addEventListener("click", (event) => {
   event.preventDefault();
 
   if (field1.value == "" && field3.value == "") {
-    alert("Preencha o formulário acima !");
+    alert("Preencha o formulário! 😉 🎥");
   } else {
     let displayLista = document.createElement("div");
     displayLista.setAttribute("class", "displayLista");
