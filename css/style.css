@@ -5,6 +5,7 @@
 }
 
 main {
+  min-height: 100vh;
   padding: 3rem;
   background: linear-gradient(
     112.1deg,
@@ -29,9 +30,10 @@ h1 {
 .images {
   width: 100%;
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
-  padding-left: 200px;
 }
 
 .images img {
