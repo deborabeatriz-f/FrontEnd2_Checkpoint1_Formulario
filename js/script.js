@@ -62,14 +62,13 @@ btn.addEventListener("click", (event) => {
   // impede que o evento padrão aconteça (no caso do form, não envia para um backend)
   event.preventDefault();
 
-  if (field1.value == "" && field3.value == "") {
+  if (field1.value == "" || field3.value == "") {
     alert("Preencha o formulário! 😉 🎥");
   } else {
     let displayLista = document.createElement("div");
     displayLista.setAttribute("class", "displayLista");
     document.querySelector(".listaCompleta").appendChild(displayLista);
 
-    console.log("clicou em mim");
     let genero = document.querySelectorAll("input[type='radio']");
     for (let i = 0; i < genero.length; i++) {
       if (genero[i].checked) {
@@ -82,10 +81,10 @@ btn.addEventListener("click", (event) => {
     let assistidoTxt;
     assistido.checked
       ? (assistidoTxt = "Filme já assistido!")
-      : (assistidoTxt = "Filme não assistido");
+      : (assistidoTxt = "Filme não assistido.");
 
     let paragrafo = document.createElement("p");
-    paragrafo.innerText = `Filme: ${field1.value}. Direção: ${field2.value}. Gênero: ${genero}. ${assistidoTxt}.`;
+    paragrafo.innerText = `Filme: ${field1.value}. Direção: ${field2.value}. Gênero: ${genero}. ${assistidoTxt}`;
 
     displayLista.appendChild(paragrafo);
 
