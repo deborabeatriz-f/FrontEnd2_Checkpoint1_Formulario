@@ -33,14 +33,20 @@ h1 {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px;
 }
 
 .images img {
   width: 200px;
   height: 200px;
   object-fit: cover;
+  overflow: hidden;
   border-radius: 32px;
+  border: solid 3px darkred;
+}
+
+.images img:hover {
+  transform: scale(1.2);
 }
 
 .button {
@@ -56,16 +62,23 @@ h1 {
   font-weight: 500;
 }
 
+.button:hover {
+transition: all, ease-in-out, 1s;
+background-color:darkred;
+color: silver;
+
+}
+
 input[type="text"] {
   text-align: center;
   height: 2rem;
   margin: 1rem;
   border: 0;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
 }
 
 h2 {
-  margin-top: 2rem;
+  margin-top: 3rem;
   margin-bottom: 1rem;
 }
 
@@ -77,6 +90,7 @@ h2 {
   flex-direction: column;
   margin: 1rem;
   padding: 1rem;
+  border-radius: 0.5rem;
 }
 
 .cartaz {
